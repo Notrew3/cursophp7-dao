@@ -15,7 +15,20 @@ require_once("config.php");
 //echo json_encode($search);
 
 //Carrega um usuario usuando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("Mario", "12");
+//echo $usuario;
+
+//Insere dados no banco
+//$usuario = new Usuario();
+//$usuario->setDeslogin("Juan");
+//$usuario->setDessenha("14123");
+//$usuario->insert();
+
+//Altera dados
 $usuario = new Usuario();
-$usuario->login("Mario", "12");
+$usuario->loadById(5);
+$usuario->update("Hail", "231452");
+
 echo $usuario;
 ?>
